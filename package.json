@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -16,6 +17,7 @@
     "customize-cra": "^1.0.0",
     "hoist-non-react-statics": "^3.3.2",
     "mockjs": "^1.1.0",
+    "node-sass": "^7.0.1",
     "react": "^18.0.0",
     "react-app-rewired": "^2.2.1",
     "react-dom": "^18.0.0",
