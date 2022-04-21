@@ -1,3 +1,13 @@
+@media screen and (max-width: 500px) {
+  .sider {
+    width: 100% !important;
+    max-width:100% !important;
+    flex: auto !important;
+    height: 70px;
+  }
+}
+
+
 .sider {
   color: #eeeeee;
   padding: 20px;

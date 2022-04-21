@@ -6,8 +6,11 @@ export interface IDemo {
     id: number;
     name: string,
     state: typeof STATUS[number]
+    Logo: string
     members: IMember[]
 }
+
+export type IDemoKey = keyof IDemo
 
 export const PERMISSIONS = ['edit', 'insert', 'delete', 'select', 'owner'] as const;
 
@@ -17,7 +20,9 @@ export interface IMember {
     id: number;
     name: string;
     Email: string;
-    Logo: string
     permission: typeof PERMISSIONS[number]
 }
+
+export type IMemberKey = keyof IMember
+
 

@@ -1,22 +1,45 @@
-.context {
-  padding: 24px;
-  margin: 0;
-  min-height: 280px;
+.layout {
+  padding: "0 24px 24px";
+  .context {
+    padding: 24px;
+    margin: 0;
+    min-height: 280px;
 
-  .space-select {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    .change-logo {
+    .space-select {
+      width: 100%;
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      width: 100px;
-      cursor: pointer;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .change-logo {
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // justify-content: center;
+        width: 100px;
+        cursor: pointer;
+      }
     }
-    
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .layout {
+    width: 100% !important;
+    max-width: 100vw !important;
+    flex: auto !important;
+    display: block !important;
+    .context {
+      padding: 12px;
+
+      .change-logo {
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // justify-content: center;
+        width: 100px;
+        cursor: pointer;
+      }
+    }
   }
 }

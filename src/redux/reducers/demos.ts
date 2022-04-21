@@ -6,21 +6,28 @@ import { IDemoAction } from '../actions/demos'
 const demos = (state: IDemo[] =
     [{
         id: 1,
-        name: 'data111',
+        name: 'demo1',
         state: 'public',
-        members: [{ id: 1, Logo: '', name: 'member11', Email: '3261937664@qq.com', permission: 'owner' }]
+        Logo: '',
+        members: [{ id: 1, name: 'chengkun', Email: '3261937664@qq.com', permission: 'owner' }]
     }, {
         id: 2,
-        name: 'data222',
-        state: 'public',
-        members: [{ id: 1, Logo: '', name: 'member11', Email: '3261937664@qq.com', permission: 'owner' }]
+        name: 'demo2',
+        state: 'private',
+        Logo: '',
+        members: [{ id: 1, name: 'chengkun2', Email: '3261937664@qq.com', permission: 'owner' }]
     }], action: IDemoAction) => {
     const { type, payload } = action
     switch (type) {
         case 'create':
-            return state
+            return [...state, payload]
         case 'edit':
-            return state
+            console.log(state.map((demo) => {
+                return demo.id === (payload as IDemo).id ? payload : demo
+            }))
+            return state.map((demo) => {
+                return demo.id === (payload as IDemo).id ? payload : demo
+            })
         default:
             return state
     }

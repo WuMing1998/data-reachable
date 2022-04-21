@@ -6,16 +6,32 @@ import { Button } from "antd";
 interface IDButtonProps {
     width?: number | string
     children?: any
+    onClick: () => void
+    mobile?: boolean
 }
+
 
 const DButton: FC<IDButtonProps> = ({
     width = '100%',
-    children = 'button'
+    children = 'button',
+    onClick,
+    mobile
 }): ReactElement => {
+    const ButtonStyle = { 
+        width,
+        minWidth: mobile?20:100,
+        color: '#999',
+        marginTop: mobile?0:10,
+        display: 'flex',
+        justifyContent: mobile?'center':'space-between',
+        alignItems: 'center' 
+    }
     return (
-        <Button style={{ width, minWidth: 100, color: '#999',marginTop:10,display:'flex',justifyContent:'space-between',alignItems:'center' }}>
-            <PlusOutlined style={{ 'marginRight': 12 }} color="#EEE" />
-            <label>{children}</label>
+        <Button onClick={onClick}
+            style={ButtonStyle}
+        >
+            <PlusOutlined style={{ 'marginRight': mobile?0:12 }} color="#EEE" />
+            {mobile ? undefined : <label>{children}</label>}
         </Button>
     )
 }

@@ -3,13 +3,20 @@ import LogoDefault from './Logo.png'
 
 interface IDLogo {
     width?: number;
-    Logo?:string
+    Logo?: string;
+    children?: string;
 }
 const DLogo: FC<IDLogo> = ({
     width = 16,
-    Logo = LogoDefault
+    Logo = LogoDefault,
+    children = '',
 }) => {
-    return <img style={{ width }} src={Logo}></img>
+    return (
+        <div className='change-logo'>
+            <img style={{ width }} src={Logo}></img>
+            <span style={{ width: '100%', color: '#91acbd' }}>{children}</span>
+        </div>
+    )
 }
 
 export default DLogo
