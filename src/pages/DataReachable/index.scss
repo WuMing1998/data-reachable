@@ -1,0 +1,22 @@
+.header {
+  background: #000;
+  font-size: 30px;
+  font-weight: 500;
+  color: #eeeeee;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    font-size: 20px;
+  }
+  // .layout {
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   align-items: center;
+  //   flex-wrap: wrap;
+  //   .sider {
+  //     width: 100% !important;
+  //   }
+  // }
+}

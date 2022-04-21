@@ -1,0 +1,25 @@
+@media screen and (max-width: 500px) {
+  .sider {
+    width: 100% !important;
+    max-width:100% !important;
+    flex: auto !important;
+    height: 70px;
+  }
+}
+
+
+.sider {
+  color: #eeeeee;
+  padding: 20px;
+  width: 240px;
+
+  .tag {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

@@ -1,9 +1,9 @@
-import React from 'react';
+import DataReachable from './pages/DataReachable';
 
 function App() {
   return (
     <div className="App">
-      App...
+      <DataReachable></DataReachable>
     </div>
   );
 }
